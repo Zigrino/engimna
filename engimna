@@ -1,0 +1,31 @@
+import string
+all_letters = []
+for i in string.printable:
+    all_letters.append[i]
+all_letters.remove['\t', '\n', '\r', '\x0b', '\x0c']
+
+def encrypt(string):
+    #encryption
+    plain_text = input("encrypt your message here: ")
+    encrypt_dict = {'a': 'f', 'b': 'c', 'c': '6', 'd': 'd', 'e': '~', 'f': '/', 'g': 'k', 'h': 'n',
+    'i': 'v', 'j': 'a', 'k': 'b', 'l': 'm', 'm': '#', 'n': '@', 'o': 'p', 'p': 'o', 'q': '>', 'r': ':', 's': ';', 't': 'q', 'u': 'u', 'v': 'w', 'w': 'x', 'x': '4', 'y': 'z', 'z': '0'}
+
+
+    shift_input = input('how many times to shift: ')
+    coded_text = ''
+    shift = int(shift_input)*9+5
+    for i in plain_text:
+        coded_text.join(encrypt_dict.get(i))
+    for i in range(len(coded_text)):
+
+    shifted_text = ''
+    for i in range(len(coded_text)):
+        shifted_text.append[all_letters[all_letters.index(coded_text(i))+shift_input]
+    coded_message = shift + ' ' + shifted_text
+    print(coded_message)
+
+
+
+def decrypt(string):
+    #decryption
+    encrypted_text = input("'enter encrypted message here: '")
